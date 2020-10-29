@@ -1,0 +1,16 @@
+index:
+    path: /
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
+    defaults:
+        path: /status
+        permanent: true
+
+status:
+    path: /status
+    controller: App\Controller\DefaultController::getStatusPage
+    condition: "request.headers.get('Accept') matches '/text.html/'"
+
+get_passport:
+    path: /passport
+    controller: App\Controller\PassportController::getPassportData
+    condition: "request.headers.get('Accept') matches '/application.json/'"

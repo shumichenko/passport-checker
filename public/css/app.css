@@ -1,0 +1,86 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+body { 
+    margin: 0;
+    padding: 0;
+}
+
+.Passport__Header {
+    font-weight: 700;
+}
+
+.Passport__Form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.Passport__Input {
+    border: none;
+    background-color: #efefef;
+    border-radius: 5px;
+    height: 50px;
+    outline: none;
+    transition: 0.2s ease-in;
+    margin-right: 30px;
+}
+.Passport__Input:focus {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 10px 3px;
+}
+.Passport__Input:read-write {
+    padding-left: 12px;
+}
+
+.Passport__Submit {
+    border: 1px solid green;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: 0.1s ease-in;
+    cursor: pointer;
+}
+.Passport__Submit:hover {
+    background-color: green;
+    color: #fff;
+}
+
+.Passport__Monitor {
+    margin-top: 50px;
+    padding-top: 30px;
+}
+
+.Passport__Monitor__Tile {
+    background-color: #f5f5f5;
+    width: 330px;
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.Passport__Monitor__Tile__Green {
+    background-color: darkseagreen !important;
+}
+
+.Passport__Monitor__Tile__Red {
+    background-color: #ff4040 !important;
+}
+
+.Passport__Monitor__Number {
+    font-size: 19px;
+}
+.Passport__Monitor__Text {
+    font-size: 13px;
+}
+
+.Page__Container {
+    margin: 0 auto;
+    padding: 0 60px;
+}
