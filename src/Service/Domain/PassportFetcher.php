@@ -36,6 +36,12 @@ class PassportFetcher extends PassportHandler
         return $hash ?? '';
     }
 
+    /**
+     * Fetches passport by specified parameters
+     * @param string $passportSeries
+     * @param string $passportNumber
+     * @return bool Returns true if passport was found
+     */
     public function fetchPassport(string $passportSeries, string $passportNumber): bool
     {
         $chunkNumber = '/home/igor_elephant/Server/passport_register/src/Resource/passports/last_chunks/' . $passportSeries . '.csv';

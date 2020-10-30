@@ -6,6 +6,10 @@ use App\Service\Domain\PassportHandler;
 
 class PassportDownloader extends PassportHandler
 {
+    /**
+     * Executes passport register update process
+     * @return bool Returns true if resource was successfully updated
+     */
     public function updateResource(): bool
     {
         if ($this->downloadResource()) {
@@ -41,6 +45,10 @@ class PassportDownloader extends PassportHandler
         return false;
     }
 
+    /**
+     * Decompresses the resource
+     * @return bool Returns true if resource was successfully decompressed
+     */
     private function decompressResource(): string
     {
         $extractionFileName = str_replace('.bz2', '.csv', $this->outputFile);
@@ -64,6 +72,11 @@ class PassportDownloader extends PassportHandler
         return $extractionFileName;
     }
 
+    /**
+     * Splits decompressed passport register file by chunks
+     * @param string $extractionFileName File which will be splitted
+     * @return bool Returns true if file was successfully splitted
+     */
     private function splitFileByChunks(string $extractionFileName): bool
     {
         $file = fopen($extractionFileName, 'r');

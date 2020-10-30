@@ -13,6 +13,9 @@ class PassportFacade
         $this->passportFetcher = $passportFetcher;
     }
 
+    /**
+     * @return bool Returns true if passport exists
+     */
     public function doesPassportExist(): bool
     {
         $requestParameters = RequestParametersProvider::getParameters(['passportSeries', 'passportNumber']);
